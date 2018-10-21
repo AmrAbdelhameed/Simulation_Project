@@ -46,12 +46,16 @@ namespace MultiQueueModels
             }
         }
 
-        public int getInterArrivalTimeByRandomRange()
+        public int randomNumberOfInterArrivalTime()
+        {
+            Random random = new Random();
+            return random.Next(1, 101);
+        }
+
+        public int getInterArrivalTimeByRandomRange(int randomNumber)
         {
             int arrivalTime = 0;
-            Random random = new Random();
-            int randomNumber = random.Next(1, 101);
-
+            
             for (int i = 0; i < InterarrivalDistribution.Count(); ++i)
             {
                 int minRange = InterarrivalDistribution[i].MinRange, maxRange = InterarrivalDistribution[i].MaxRange;

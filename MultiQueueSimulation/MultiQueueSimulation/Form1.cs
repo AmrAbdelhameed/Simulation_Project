@@ -90,6 +90,11 @@ namespace MultiQueueSimulation
                 server.TimeDistribution = timeDistributions;
                 server.CalculateServiceTimeDistribution();
 
+                /*int rndNumber = server.randomNumberOfServiceTime();
+                int serviceTime = server.getServiceTimeByRandomRange(rndNumber);
+
+                MessageBox.Show(rndNumber + " " + serviceTime);*/
+
                 simulationSystem.Servers.Add(server);
             }
 
@@ -100,6 +105,11 @@ namespace MultiQueueSimulation
                     MessageBox.Show(simulationSystem.Servers[b].TimeDistribution[i].Time + " " + simulationSystem.Servers[b].TimeDistribution[i].Probability + " " + simulationSystem.Servers[b].TimeDistribution[i].CummProbability + " " + simulationSystem.Servers[b].TimeDistribution[i].MinRange + " " + simulationSystem.Servers[b].TimeDistribution[i].MaxRange);
                 }
             }*/
+
+            /*int rndNumber = simulationSystem.randomNumberOfInterArrivalTime();
+            int arrTime = simulationSystem.getInterArrivalTimeByRandomRange(rndNumber);
+
+            MessageBox.Show(rndNumber + " " + arrTime);*/
         }
 
         private void Form1_Load(object sender, EventArgs e)

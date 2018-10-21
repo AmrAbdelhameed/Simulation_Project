@@ -42,11 +42,15 @@ namespace MultiQueueModels
             }
         }
 
-        public int getServiceTimeByRandomRange()
+        public int randomNumberOfServiceTime()
+        {
+            Random random = new Random();
+            return random.Next(1, 101);
+        }
+
+        public int getServiceTimeByRandomRange(int randomNumber)
         {
             int arrivalTime = 0;
-            Random random = new Random();
-            int randomNumber = random.Next(1, 101);
 
             for (int i = 0; i < TimeDistribution.Count(); ++i)
             {
