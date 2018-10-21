@@ -28,6 +28,28 @@ namespace MultiQueueSimulation
 
         private void btn_output_Click(object sender, EventArgs e)
         {
+            int rndNumber = simulationSystem.randomNumberOfInterArrivalTime();
+            int arrTime = simulationSystem.getInterArrivalTimeByRandomRange(rndNumber);
+
+            MessageBox.Show(rndNumber + " " + arrTime);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            simulationSystem = new SimulationSystem();
+            fileLines = new List<string>();
+            StreamReader sr = new StreamReader(@"D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Template\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase1.txt");
+            while (!sr.EndOfStream)
+            {
+                fileLines.Add(sr.ReadLine());
+            }
+            sr.Close();
+
+            //for (int a = 0; a < fileLines.Count(); ++a)
+                //MessageBox.Show(fileLines[a]);
+
+            ///////////////////////////////////////////////////////
+
             int idx_NumberOfServers = fileLines.IndexOf("NumberOfServers");
             simulationSystem.NumberOfServers = Convert.ToInt32(fileLines[idx_NumberOfServers + 1]);
 
@@ -41,6 +63,8 @@ namespace MultiQueueSimulation
             simulationSystem.SelectionMethod = (Enums.SelectionMethod)Convert.ToInt32(fileLines[idx_SelectionMethod + 1]);
 
             //MessageBox.Show(simulationSystem.NumberOfServers + " " + simulationSystem.StoppingNumber + " " + simulationSystem.StoppingCriteria + " " + simulationSystem.SelectionMethod);
+
+            ///////////////////////////////////////////////////////
 
             int idx_InterarrivalDistribution = fileLines.IndexOf("InterarrivalDistribution");
             timeDistributions = new List<TimeDistribution>();
@@ -63,6 +87,8 @@ namespace MultiQueueSimulation
             {
                 MessageBox.Show(simulationSystem.InterarrivalDistribution[i].Time + " " + simulationSystem.InterarrivalDistribution[i].Probability + " " + simulationSystem.InterarrivalDistribution[i].CummProbability + " " + simulationSystem.InterarrivalDistribution[i].MinRange + " " + simulationSystem.InterarrivalDistribution[i].MaxRange);
             }*/
+
+            ///////////////////////////////////////////////////////
 
             int idx_ServiceDistribution_Server1 = fileLines.IndexOf("ServiceDistribution_Server1") + 1, counter = 0;
             
@@ -106,25 +132,7 @@ namespace MultiQueueSimulation
                 }
             }*/
 
-            /*int rndNumber = simulationSystem.randomNumberOfInterArrivalTime();
-            int arrTime = simulationSystem.getInterArrivalTimeByRandomRange(rndNumber);
-
-            MessageBox.Show(rndNumber + " " + arrTime);*/
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            simulationSystem = new SimulationSystem();
-            fileLines = new List<string>();
-            StreamReader sr = new StreamReader(@"D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Template\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase1.txt");
-            while (!sr.EndOfStream)
-            {
-                fileLines.Add(sr.ReadLine());
-            }
-            sr.Close();
-
-            //for (int a = 0; a < fileLines.Count(); ++a)
-                //MessageBox.Show(fileLines[a]);
+            ///////////////////////////////////////////////////////
         }      
     }
 }
