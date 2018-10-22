@@ -15,10 +15,10 @@ namespace MultiQueueSimulation
 {
     public partial class Form1 : Form
     {
+        SimulationSystem simulationSystem;
         List<string> fileLines;
         List<TimeDistribution> timeDistributions;
         TimeDistribution timeDistribution;
-        SimulationSystem simulationSystem;
         Server server;
 
         public Form1()
@@ -113,19 +113,16 @@ namespace MultiQueueSimulation
                 }
 
                 server = new Server();
+                server.ID = a + 1;
                 server.TimeDistribution = timeDistributions;
                 server.CalculateServiceTimeDistribution();
-
-                /*int rndNumber = server.randomNumberOfServiceTime();
-                int serviceTime = server.getServiceTimeByRandomRange(rndNumber);
-
-                MessageBox.Show(rndNumber + " " + serviceTime);*/
 
                 simulationSystem.Servers.Add(server);
             }
 
             /*for (int b = 0; b < simulationSystem.NumberOfServers; ++b)
             {
+                MessageBox.Show(simulationSystem.Servers[b].ID + "");
                 for (int i = 0; i < simulationSystem.Servers[b].TimeDistribution.Count(); ++i)
                 {
                     MessageBox.Show(simulationSystem.Servers[b].TimeDistribution[i].Time + " " + simulationSystem.Servers[b].TimeDistribution[i].Probability + " " + simulationSystem.Servers[b].TimeDistribution[i].CummProbability + " " + simulationSystem.Servers[b].TimeDistribution[i].MinRange + " " + simulationSystem.Servers[b].TimeDistribution[i].MaxRange);

@@ -50,18 +50,18 @@ namespace MultiQueueModels
 
         public int getServiceTimeByRandomRange(int randomNumber)
         {
-            int arrivalTime = 0;
+            int serviceTime = 0;
 
             for (int i = 0; i < TimeDistribution.Count(); ++i)
             {
                 int minRange = TimeDistribution[i].MinRange, maxRange = TimeDistribution[i].MaxRange;
                 if (randomNumber >= minRange && randomNumber <= maxRange)
                 {
-                    arrivalTime = TimeDistribution[i].Time;
+                    serviceTime = TimeDistribution[i].Time;
                     break;
                 }
             }
-            return arrivalTime;
+            return serviceTime;
         }
     }
 }
