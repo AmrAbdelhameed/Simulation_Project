@@ -39,7 +39,7 @@
             this.txtSelectionMethod = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridViewInterarrival = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtServiceDistribution = new System.Windows.Forms.Label();
             this.dataGridViewServers = new System.Windows.Forms.DataGridView();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_next = new System.Windows.Forms.Button();
@@ -146,14 +146,14 @@
             this.dataGridViewInterarrival.Size = new System.Drawing.Size(543, 168);
             this.dataGridViewInterarrival.TabIndex = 12;
             // 
-            // label6
+            // txtServiceDistribution
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 252);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Service Distribution (All Servers)";
+            this.txtServiceDistribution.AutoSize = true;
+            this.txtServiceDistribution.Location = new System.Drawing.Point(12, 252);
+            this.txtServiceDistribution.Name = "txtServiceDistribution";
+            this.txtServiceDistribution.Size = new System.Drawing.Size(98, 13);
+            this.txtServiceDistribution.TabIndex = 13;
+            this.txtServiceDistribution.Text = "Service Distribution";
             // 
             // dataGridViewServers
             // 
@@ -191,7 +191,7 @@
             this.Controls.Add(this.btn_next);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.dataGridViewServers);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtServiceDistribution);
             this.Controls.Add(this.dataGridViewInterarrival);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtSelectionMethod);
@@ -227,7 +227,7 @@
         private System.Windows.Forms.Label txtSelectionMethod;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridViewInterarrival;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label txtServiceDistribution;
         private System.Windows.Forms.DataGridView dataGridViewServers;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_next;

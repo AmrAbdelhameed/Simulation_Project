@@ -89,13 +89,14 @@ namespace MultiQueueSimulation
 
             ///////////////////////////////////////////////////////
 
-            int idx_ServiceDistribution_Server1 = fileLines.IndexOf("ServiceDistribution_Server1") + 1, counter = 0;
+            int idx_ServiceDistribution_Server = fileLines.IndexOf("ServiceDistribution_Server1") + 1, counter = 0;
             
             for (int a = 0; a < simulationSystem.NumberOfServers; ++a)
             {
                 timeDistributions = new List<TimeDistribution>();
-                idx_ServiceDistribution_Server1 += counter;
-                for (int i = idx_ServiceDistribution_Server1; i < fileLines.Count(); ++i)
+                idx_ServiceDistribution_Server += counter;
+                counter = 0;
+                for (int i = idx_ServiceDistribution_Server; i < fileLines.Count(); ++i)
                 {
                     if (string.IsNullOrEmpty(fileLines[i]))
                     {
@@ -119,6 +120,7 @@ namespace MultiQueueSimulation
                 simulationSystem.Servers.Add(server);
             }
 
+            txtServiceDistribution.Text = "Service Distribution (Server ID: " + simulationSystem.Servers[CounterOfServers].ID+ ")";
             dataGridViewServers.DataSource = simulationSystem.Servers[CounterOfServers].TimeDistribution;
         }
 
@@ -126,7 +128,10 @@ namespace MultiQueueSimulation
         {
             CounterOfServers--;
             if (CounterOfServers >= 0)
+            {
+                txtServiceDistribution.Text = "Service Distribution (Server ID: " + simulationSystem.Servers[CounterOfServers].ID + ")";
                 dataGridViewServers.DataSource = simulationSystem.Servers[CounterOfServers].TimeDistribution;
+            }
             else
                 CounterOfServers++;
         }
@@ -135,7 +140,10 @@ namespace MultiQueueSimulation
         {
             CounterOfServers++;
             if (CounterOfServers < simulationSystem.Servers.Count())
+            {
+                txtServiceDistribution.Text = "Service Distribution (Server ID: " + simulationSystem.Servers[CounterOfServers].ID + ")";
                 dataGridViewServers.DataSource = simulationSystem.Servers[CounterOfServers].TimeDistribution;
+            }
             else
                 CounterOfServers--;
         }
