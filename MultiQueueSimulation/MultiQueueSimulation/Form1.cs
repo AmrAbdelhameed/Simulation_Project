@@ -20,6 +20,7 @@ namespace MultiQueueSimulation
         List<TimeDistribution> timeDistributions;
         TimeDistribution timeDistribution;
         Server server;
+        int CounterOfServers = 0;
 
         public Form1()
         {
@@ -28,10 +29,12 @@ namespace MultiQueueSimulation
 
         private void btn_output_Click(object sender, EventArgs e)
         {
-            int rndNumber = simulationSystem.randomNumberOfInterArrivalTime();
+            // for test getInterArrivalTimeByRandomRange function is correct
+            /*int rndNumber = simulationSystem.randomNumberOfInterArrivalTime();
             int arrTime = simulationSystem.getInterArrivalTimeByRandomRange(rndNumber);
+            MessageBox.Show(rndNumber + " " + arrTime);*/
 
-            MessageBox.Show(rndNumber + " " + arrTime);
+            // elmfrod hena te3ml calling le form gdeda w ykon feha DataGridView 3bara 3n List<SimulationCase>
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -45,24 +48,23 @@ namespace MultiQueueSimulation
             }
             sr.Close();
 
-            //for (int a = 0; a < fileLines.Count(); ++a)
-                //MessageBox.Show(fileLines[a]);
-
             ///////////////////////////////////////////////////////
 
             int idx_NumberOfServers = fileLines.IndexOf("NumberOfServers");
             simulationSystem.NumberOfServers = Convert.ToInt32(fileLines[idx_NumberOfServers + 1]);
+            txtNumberOfServers.Text = simulationSystem.NumberOfServers.ToString();
 
             int idx_StoppingNumber = fileLines.IndexOf("StoppingNumber");
             simulationSystem.StoppingNumber = Convert.ToInt32(fileLines[idx_StoppingNumber + 1]);
+            txtStoppingNumber.Text = simulationSystem.StoppingNumber.ToString();
 
             int idx_StoppingCriteria = fileLines.IndexOf("StoppingCriteria");
             simulationSystem.StoppingCriteria = (Enums.StoppingCriteria)Convert.ToInt32(fileLines[idx_StoppingCriteria + 1]);
+            txtStoppingCriteria.Text = simulationSystem.StoppingCriteria.ToString();
 
             int idx_SelectionMethod = fileLines.IndexOf("SelectionMethod");
             simulationSystem.SelectionMethod = (Enums.SelectionMethod)Convert.ToInt32(fileLines[idx_SelectionMethod + 1]);
-
-            //MessageBox.Show(simulationSystem.NumberOfServers + " " + simulationSystem.StoppingNumber + " " + simulationSystem.StoppingCriteria + " " + simulationSystem.SelectionMethod);
+            txtSelectionMethod.Text = simulationSystem.SelectionMethod.ToString();
 
             ///////////////////////////////////////////////////////
 
@@ -83,10 +85,7 @@ namespace MultiQueueSimulation
             simulationSystem.InterarrivalDistribution = timeDistributions;
             simulationSystem.CalculateInterArrivalTimeDistribution();
 
-            /*for (int i = 0; i < simulationSystem.InterarrivalDistribution.Count(); ++i)
-            {
-                MessageBox.Show(simulationSystem.InterarrivalDistribution[i].Time + " " + simulationSystem.InterarrivalDistribution[i].Probability + " " + simulationSystem.InterarrivalDistribution[i].CummProbability + " " + simulationSystem.InterarrivalDistribution[i].MinRange + " " + simulationSystem.InterarrivalDistribution[i].MaxRange);
-            }*/
+            dataGridViewInterarrival.DataSource = simulationSystem.InterarrivalDistribution;
 
             ///////////////////////////////////////////////////////
 
@@ -120,16 +119,25 @@ namespace MultiQueueSimulation
                 simulationSystem.Servers.Add(server);
             }
 
-            /*for (int b = 0; b < simulationSystem.NumberOfServers; ++b)
-            {
-                MessageBox.Show(simulationSystem.Servers[b].ID + "");
-                for (int i = 0; i < simulationSystem.Servers[b].TimeDistribution.Count(); ++i)
-                {
-                    MessageBox.Show(simulationSystem.Servers[b].TimeDistribution[i].Time + " " + simulationSystem.Servers[b].TimeDistribution[i].Probability + " " + simulationSystem.Servers[b].TimeDistribution[i].CummProbability + " " + simulationSystem.Servers[b].TimeDistribution[i].MinRange + " " + simulationSystem.Servers[b].TimeDistribution[i].MaxRange);
-                }
-            }*/
+            dataGridViewServers.DataSource = simulationSystem.Servers[CounterOfServers].TimeDistribution;
+        }
 
-            ///////////////////////////////////////////////////////
-        }      
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            CounterOfServers--;
+            if (CounterOfServers >= 0)
+                dataGridViewServers.DataSource = simulationSystem.Servers[CounterOfServers].TimeDistribution;
+            else
+                CounterOfServers++;
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            CounterOfServers++;
+            if (CounterOfServers < simulationSystem.Servers.Count())
+                dataGridViewServers.DataSource = simulationSystem.Servers[CounterOfServers].TimeDistribution;
+            else
+                CounterOfServers--;
+        }
     }
 }
