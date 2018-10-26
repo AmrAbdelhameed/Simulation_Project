@@ -53,7 +53,7 @@
             this.btn_output.Name = "btn_output";
             this.btn_output.Size = new System.Drawing.Size(110, 35);
             this.btn_output.TabIndex = 2;
-            this.btn_output.Text = "Output";
+            this.btn_output.Text = "Simulation System Execute";
             this.btn_output.UseVisualStyleBackColor = true;
             this.btn_output.Click += new System.EventHandler(this.btn_output_Click);
             // 

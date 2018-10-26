@@ -61,6 +61,8 @@ namespace MultiQueueModels
             SimulationCase simulationCase = new SimulationCase();
             int NumberOfCustomer = simulationSystem.StoppingNumber;
             int number = 1;
+            simulationCase.RandomInterArrival = 1;
+            simulationCase.RandomService = 1;
             Output.Add(simulationCase);
 
             Random rand = new Random();
@@ -68,16 +70,16 @@ namespace MultiQueueModels
             {
                 simulationCase = new SimulationCase();
                 simulationCase.CustomerNumber = number;
-                if (simulationCase.CustomerNumber == 1)
+                /*if (simulationCase.CustomerNumber == 1)
                 {
                     simulationCase.ArrivalTime = 0;
                 }
                 else
-                {
+                {*/
                     simulationCase.RandomInterArrival = rand.Next(1, 101);
                     simulationCase.InterArrival = simulationSystem.getInterArrivalTimeByRandomRange(simulationCase.RandomInterArrival);
-                    simulationCase.ArrivalTime = simulationCase.InterArrival + Output[Output.Count - 2].ArrivalTime;
-                }
+                    simulationCase.ArrivalTime = simulationCase.InterArrival + Output[Output.Count - 1].ArrivalTime;
+                //}
                 int idx;
                 if (simulationSystem.SelectionMethod == Enums.SelectionMethod.HighestPriority)
                 {
