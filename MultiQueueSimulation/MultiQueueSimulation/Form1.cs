@@ -29,19 +29,51 @@ namespace MultiQueueSimulation
 
         private void btn_output_Click(object sender, EventArgs e)
         {
-            // for test getInterArrivalTimeByRandomRange function is correct
-            /*int rndNumber = simulationSystem.randomNumberOfInterArrivalTime();
-            int arrTime = simulationSystem.getInterArrivalTimeByRandomRange(rndNumber);
-            MessageBox.Show(rndNumber + " " + arrTime);*/
+            Methods methods = new Methods();
+            simulationSystem.SelectionMethod = Enums.SelectionMethod.HighestPriority;
+            simulationSystem.ServerPeriorty = 1;
+            simulationSystem.SimulationTable = methods.CalculateMethod(simulationSystem);
+            int totalwait = 0, numberwait = 0,count=0,maxinQueue=0;
+            for(int i=0;i<simulationSystem.SimulationTable.Count;i++)
+            {
+                numberwait += (simulationSystem.SimulationTable[i].TimeInQueue != 0 ? 1 : 0);
+                totalwait += simulationSystem.SimulationTable[i].TimeInQueue;
+                if (simulationSystem.SimulationTable[i].TimeInQueue != 0)
+                    count++;
+                else
+                    count = 0;
+                maxinQueue = Math.Max(maxinQueue, count);
+            }
+            simulationSystem.PerformanceMeasures.AverageWaitingTime = totalwait / simulationSystem.SimulationTable.Count;
+            simulationSystem.PerformanceMeasures.WaitingProbability=numberwait/simulationSystem.SimulationTable.Count;
+            simulationSystem.PerformanceMeasures.MaxQueueLength = maxinQueue;
+            for(int i=0;i<simulationSystem.Servers.Count;i++)
+            {
+                simulationSystem.Servers[i].IdleProbability = simulationSystem.Servers[i].Idle / simulationSystem.ToatalRun;
+                simulationSystem.Servers[i].AverageServiceTime = simulationSystem.Servers[i].TotalWorkingTime / simulationSystem.Servers[i].Customer;
+                //ask a question
+                simulationSystem.Servers[i].Utilization =(simulationSystem.Servers[i].TotalWorkingTime) / simulationSystem.ToatalRun;
 
-            // elmfrod hena te3ml calling le form gdeda w ykon feha DataGridView 3bara 3n List<SimulationCase>
+            }
+            //SimulationCase simulationCase = new SimulationCase();
+            // count = 0;
+            //for (int i = 0; i < simulationSystem.SimulationTable.Count; i++)
+            //{
+            //    simulationCase = simulationSystem.SimulationTable[i];
+            //    if (simulationCase.RandomInterArrival > 100 || simulationCase.RandomService > 100)
+            //        count++;
+            //  //      MessageBox.Show(simulationCase.CustomerNumber + " " + simulationCase.RandomInterArrival + " " + simulationCase.InterArrival + " " + simulationCase.ArrivalTime
+            //    //       +" "+simulationCase.RandomService+ " " + simulationCase.StartTime + " " + simulationCase.ServiceTime + " " + simulationCase.EndTime + " " + simulationCase.TimeInQueue);
+            //}
+            string testingResult = TestingManager.Test(simulationSystem, Constants.FileNames.TestCase1);
+            MessageBox.Show(testingResult + " " + simulationSystem.SimulationTable.Count());
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             simulationSystem = new SimulationSystem();
             fileLines = new List<string>();
-            StreamReader sr = new StreamReader(@"D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Template\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase1.txt");
+            StreamReader sr = new StreamReader(@"E:\Simulation_Project\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase1.txt");
             while (!sr.EndOfStream)
             {
                 fileLines.Add(sr.ReadLine());

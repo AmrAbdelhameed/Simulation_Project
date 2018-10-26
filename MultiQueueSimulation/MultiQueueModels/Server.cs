@@ -22,8 +22,9 @@ namespace MultiQueueModels
 
         //optional if needed use them
         public int FinishTime { get; set; }
-        public int TotalWorkingTime { get; set; }
-
+        public decimal TotalWorkingTime { get; set; }
+        public decimal Idle { get; set; }
+        public decimal Customer { get; set; }
         ///////////// OPERATIONS /////////////
         public void CalculateServiceTimeDistribution()
         {
