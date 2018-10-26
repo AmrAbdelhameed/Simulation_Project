@@ -101,6 +101,7 @@ namespace MultiQueueModels
                 simulationSystem.Servers[idx].Customer++;
                 simulationSystem.ToatalRun += simulationCase.ServiceTime;
                 simulationCase.TimeInQueue = simulationCase.StartTime - simulationCase.ArrivalTime;
+                simulationSystem.Servers[idx].BusyTime.Add(new Tuple<int, int>(simulationCase.StartTime, simulationCase.EndTime));
                 if (simulationSystem.StoppingCriteria == Enums.StoppingCriteria.SimulationEndTime)
                 {
                     if (simulationSystem.Servers[idx].FinishTime > simulationSystem.StoppingNumber)

@@ -30,7 +30,6 @@ namespace MultiQueueSimulation
         private void btn_output_Click(object sender, EventArgs e)
         {
             Methods methods = new Methods();
-            simulationSystem.SelectionMethod = Enums.SelectionMethod.HighestPriority;
             simulationSystem.ServerPeriorty = 1;
             simulationSystem.SimulationTable = methods.CalculateMethod(simulationSystem);
             int totalwait = 0, numberwait = 0,count=0,maxinQueue=0;

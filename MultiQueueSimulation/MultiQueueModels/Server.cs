@@ -11,6 +11,7 @@ namespace MultiQueueModels
         public Server()
         {
             this.TimeDistribution = new List<TimeDistribution>();
+            BusyTime = new List< Tuple<int, int> >();
         }
 
         public int ID { get; set; }
@@ -20,6 +21,7 @@ namespace MultiQueueModels
 
         public List<TimeDistribution> TimeDistribution;
 
+        public List<Tuple<int, int>> BusyTime;
         //optional if needed use them
         public int FinishTime { get; set; }
         public int TotalWorkingTime { get; set; }
