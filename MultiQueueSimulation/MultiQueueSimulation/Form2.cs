@@ -14,6 +14,8 @@ namespace MultiQueueSimulation
     public partial class Form2 : Form
     {
         public SimulationSystem simulationSystem;
+        private List<SimulationCaseOutput> simulationCasesOutput;
+        private SimulationCaseOutput simulationCaseobj;
         public Form2()
         {
             InitializeComponent();
@@ -21,11 +23,23 @@ namespace MultiQueueSimulation
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            dataGridViewSimulationCase.DataSource = simulationSystem.SimulationTable;
+            simulationCasesOutput = new List<SimulationCaseOutput>();
+
+            for (int i = 0; i < simulationSystem.SimulationTable.Count; ++i)
+            {
+                simulationCaseobj = new SimulationCaseOutput(simulationSystem.SimulationTable[i]);
+                simulationCasesOutput.Add(simulationCaseobj);
+            }
+            dataGridViewSimulationCase.DataSource = simulationCasesOutput;
 
             AverageWaitingTime.Text = "Average Waiting Time : " + simulationSystem.PerformanceMeasures.AverageWaitingTime;
             MaxQueueLength.Text = "Max Queue Length : " + simulationSystem.PerformanceMeasures.MaxQueueLength;
             WaitingProbability.Text = "Waiting Probability: " + simulationSystem.PerformanceMeasures.WaitingProbability;
+        }
+
+        private void btn_output_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

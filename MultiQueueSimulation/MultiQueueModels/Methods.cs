@@ -90,14 +90,18 @@ namespace MultiQueueModels
                 {
                     idx = GetServerNumberUtilizationMethod(simulationSystem);
                 }
+                if (simulationCase.ArrivalTime > simulationSystem.Servers[idx].FinishTime)
+                    simulationSystem.Servers[idx].Idle += Math.Abs(simulationSystem.Servers[idx].FinishTime - simulationCase.ArrivalTime);
                 simulationCase.RandomService = rand.Next(1, 101);
-                simulationCase.StartTime = Math.Max(simulationSystem.Servers[idx].FinishTime, simulationCase.ArrivalTime);
+                if (simulationSystem.Servers[idx].FinishTime==0)
+                    simulationCase.StartTime = simulationCase.ArrivalTime;
+                else
+                simulationCase.StartTime = Math.Max(simulationSystem.Servers[idx].FinishTime+1, simulationCase.ArrivalTime);
                 simulationCase.ServiceTime = simulationSystem.Servers[idx].getServiceTimeByRandomRange(simulationCase.RandomService);
                 simulationCase.EndTime = simulationCase.StartTime + simulationCase.ServiceTime;
                 simulationCase.AssignedServer = simulationSystem.Servers[idx];
                 simulationSystem.Servers[idx].FinishTime = simulationCase.EndTime;
                 simulationSystem.Servers[idx].TotalWorkingTime += simulationCase.ServiceTime;
-                simulationSystem.Servers[idx].Idle += Math.Abs(simulationSystem.Servers[idx].FinishTime - simulationCase.ArrivalTime);
                 simulationSystem.Servers[idx].Customer++;
                 simulationSystem.ToatalRun += simulationCase.ServiceTime;
                 simulationCase.TimeInQueue = simulationCase.StartTime - simulationCase.ArrivalTime;

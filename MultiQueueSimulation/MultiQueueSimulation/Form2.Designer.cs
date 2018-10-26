@@ -53,6 +53,7 @@
             this.btn_output.TabIndex = 3;
             this.btn_output.Text = "Graph";
             this.btn_output.UseVisualStyleBackColor = true;
+            this.btn_output.Click += new System.EventHandler(this.btn_output_Click);
             // 
             // label1
             // 

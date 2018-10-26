@@ -69,8 +69,8 @@ namespace MultiQueueSimulation
             //    //       +" "+simulationCase.RandomService+ " " + simulationCase.StartTime + " " + simulationCase.ServiceTime + " " + simulationCase.EndTime + " " + simulationCase.TimeInQueue);
             //}
 
-            string testingResult = TestingManager.Test(simulationSystem, Constants.FileNames.TestCase1);
-            MessageBox.Show(testingResult + " " + simulationSystem.SimulationTable.Count()+" "+ simulationSystem.PerformanceMeasures.AverageWaitingTime);
+            string testingResult = TestingManager.Test(simulationSystem, Constants.FileNames.TestCase2);
+            MessageBox.Show(testingResult);
 
             Form2 f = new Form2();
             f.simulationSystem = simulationSystem;
@@ -81,7 +81,7 @@ namespace MultiQueueSimulation
         {
             simulationSystem = new SimulationSystem();
             fileLines = new List<string>();
-            StreamReader sr = new StreamReader(@"E:\Simulation_Final\Simulation_Project\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase1.txt");
+            StreamReader sr = new StreamReader(@"E:\Simulation_Final\Simulation_Project\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase2.txt");
             while (!sr.EndOfStream)
             {
                 fileLines.Add(sr.ReadLine());
