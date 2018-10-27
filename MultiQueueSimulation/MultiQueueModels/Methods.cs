@@ -62,6 +62,7 @@ namespace MultiQueueModels
             int NumberOfCustomer = simulationSystem.StoppingNumber;
             int number = 1;
             Random rand = new Random();
+            Queue<int> q = new Queue<int>();
             while (true)
             {
                 simulationCase = new SimulationCase();
@@ -90,36 +91,44 @@ namespace MultiQueueModels
                 {
                     idx = GetServerNumberUtilizationMethod(simulationSystem);
                 }
-                if (simulationCase.ArrivalTime > simulationSystem.Servers[idx].FinishTime)
-                    simulationSystem.Servers[idx].Idle += Math.Abs(simulationSystem.Servers[idx].FinishTime - simulationCase.ArrivalTime);
                 simulationCase.RandomService = rand.Next(1, 101);
-                if (simulationSystem.Servers[idx].FinishTime==0)
+                if (simulationSystem.Servers[idx].FinishTime == 0)
                     simulationCase.StartTime = simulationCase.ArrivalTime;
                 else
-                simulationCase.StartTime = Math.Max(simulationSystem.Servers[idx].FinishTime+1, simulationCase.ArrivalTime);
+                    simulationCase.StartTime = Math.Max(simulationSystem.Servers[idx].FinishTime, simulationCase.ArrivalTime);
                 simulationCase.ServiceTime = simulationSystem.Servers[idx].getServiceTimeByRandomRange(simulationCase.RandomService);
                 simulationCase.EndTime = simulationCase.StartTime + simulationCase.ServiceTime;
                 simulationCase.AssignedServer = simulationSystem.Servers[idx];
+
+                if (simulationSystem.StoppingCriteria == Enums.StoppingCriteria.SimulationEndTime)
+                {
+                    if (simulationCase.EndTime > simulationSystem.StoppingNumber)
+                        break;
+                    if (number == NumberOfCustomer)
+                        break;
+                }
                 simulationSystem.Servers[idx].FinishTime = simulationCase.EndTime;
                 simulationSystem.Servers[idx].TotalWorkingTime += simulationCase.ServiceTime;
                 simulationSystem.Servers[idx].Customer++;
                 simulationSystem.ToatalRun += simulationCase.ServiceTime;
                 simulationCase.TimeInQueue = simulationCase.StartTime - simulationCase.ArrivalTime;
                 simulationSystem.Servers[idx].BusyTime.Add(new Tuple<int, int>(simulationCase.StartTime, simulationCase.EndTime));
-                if (simulationSystem.StoppingCriteria == Enums.StoppingCriteria.SimulationEndTime)
+                while (q.Count > 0)
                 {
-                    if (simulationSystem.Servers[idx].FinishTime > simulationSystem.StoppingNumber)
-                        break;
-                    if (number == NumberOfCustomer)
+                    if (q.Peek()<simulationCase.EndTime)
+                        q.Dequeue();
+                    else
                         break;
                 }
-                else
+                if (simulationCase.TimeInQueue != 0)
                 {
-                    if (number == NumberOfCustomer)
-                    {
-                        Output.Add(simulationCase);
-                        break;
-                    }
+                    q.Enqueue( simulationCase.EndTime);
+                    simulationSystem.PerformanceMeasures.MaxQueueLength = Math.Max(simulationSystem.PerformanceMeasures.MaxQueueLength, q.Count());
+                }
+                if (number == NumberOfCustomer)
+                {
+                    Output.Add(simulationCase);
+                    break;
                 }
                 number++;
                 Output.Add(simulationCase);
