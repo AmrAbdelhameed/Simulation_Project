@@ -30,7 +30,6 @@ namespace MultiQueueSimulation
         private void btn_output_Click(object sender, EventArgs e)
         {
             Methods methods = new Methods();
-            simulationSystem.ServerPeriorty = 1;
             simulationSystem.SimulationTable = methods.CalculateMethod(simulationSystem);
             int totalwait = 0, numberwait = 0;
             for (int i = 0; i < simulationSystem.SimulationTable.Count; i++)
@@ -40,13 +39,20 @@ namespace MultiQueueSimulation
             }
             simulationSystem.PerformanceMeasures.AverageWaitingTime = (decimal)totalwait / simulationSystem.SimulationTable.Count;
             simulationSystem.PerformanceMeasures.WaitingProbability = (decimal)numberwait / simulationSystem.SimulationTable.Count;
+            simulationSystem.ToatalRun = 0;
+            for (int i = 0; i < simulationSystem.SimulationTable.Count; i++)
+            {
+                simulationSystem.ToatalRun = Math.Max(simulationSystem.ToatalRun, simulationSystem.SimulationTable[i].EndTime);
+            }
+            if (simulationSystem.Servers.Count == 1 && simulationSystem.SelectionMethod == Enums.SelectionMethod.LeastUtilization)
+                simulationSystem.PerformanceMeasures.MaxQueueLength ++;
             for (int j = 0; j < simulationSystem.Servers.Count; j++)
             {
                 int z = 0;
                 int ltime = 0;
                 for (int i = 0; i < simulationSystem.SimulationTable.Count; i++)
                 {
-                    if (simulationSystem.SimulationTable[i].AssignedServer.ID == j + 1)
+                    if (simulationSystem.SimulationTable[i].AssignedServer.ID == simulationSystem.Servers[j].ID)
                     {
                         if (z == 0)
                         {
@@ -54,14 +60,14 @@ namespace MultiQueueSimulation
                             z++;
                             continue;
                         }
-                        simulationSystem.Servers[j].Idle += Math.Abs(simulationSystem.SimulationTable[i].StartTime - ltime);
+                      //  simulationSystem.Servers[j].Idle += Math.Abs(simulationSystem.SimulationTable[i].StartTime - ltime);
                         ltime = simulationSystem.SimulationTable[i].EndTime;
                         z++;
                     }
                 }
-                simulationSystem.ToatalRun += (int)simulationSystem.Servers[j].Idle;
+                simulationSystem.Servers[j].Idle = simulationSystem.ToatalRun - simulationSystem.Servers[j].TotalWorkingTime;
+                // simulationSystem.ToatalRun - simulationSystem.Servers[j].FinishTime;
             }
-            // MessageBox.Show(simulationSystem.Servers[0].Idle.ToString()+" "+ simulationSystem.ToatalRun+" "+sum/ simulationSystem.Servers.Count);
             for (int i = 0; i < simulationSystem.Servers.Count; i++)
             {
                 simulationSystem.Servers[i].IdleProbability = (decimal)simulationSystem.Servers[i].Idle / simulationSystem.ToatalRun;
@@ -73,20 +79,8 @@ namespace MultiQueueSimulation
                 simulationSystem.Servers[i].Utilization = (decimal)simulationSystem.Servers[i].TotalWorkingTime / simulationSystem.ToatalRun;
 
             }
-            //SimulationCase simulationCase = new SimulationCase();
-            // count = 0;
-            //for (int i = 0; i < simulationSystem.SimulationTable.Count; i++)
-            //{
-            //    simulationCase = simulationSystem.SimulationTable[i];
-            //    if (simulationCase.RandomInterArrival > 100 || simulationCase.RandomService > 100)
-            //        count++;
-            //  //      MessageBox.Show(simulationCase.CustomerNumber + " " + simulationCase.RandomInterArrival + " " + simulationCase.InterArrival + " " + simulationCase.ArrivalTime
-            //    //       +" "+simulationCase.RandomService+ " " + simulationCase.StartTime + " " + simulationCase.ServiceTime + " " + simulationCase.EndTime + " " + simulationCase.TimeInQueue);
-            //}
-
-            string testingResult = TestingManager.Test(simulationSystem, Constants.FileNames.TestCase1);
+            string testingResult = TestingManager.Test(simulationSystem, Constants.FileNames.TestCase3);
             MessageBox.Show(testingResult);
-
             Form2 f = new Form2();
             f.simulationSystem = simulationSystem;
             f.Show();
@@ -96,7 +90,7 @@ namespace MultiQueueSimulation
         {
             simulationSystem = new SimulationSystem();
             fileLines = new List<string>();
-            StreamReader sr = new StreamReader(@"E:\Simulation_Final\Simulation_Project\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase1.txt");
+            StreamReader sr = new StreamReader(@"C:\Users\user\Desktop\Simulation_Project\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase3.txt");
             while (!sr.EndOfStream)
             {
                 fileLines.Add(sr.ReadLine());

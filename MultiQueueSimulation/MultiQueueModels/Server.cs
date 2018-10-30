@@ -11,12 +11,13 @@ namespace MultiQueueModels
         public Server()
         {
             this.TimeDistribution = new List<TimeDistribution>();
-            BusyTime = new List< Tuple<int, int> >();
+            BusyTime = new List<Tuple<int, int>>();
+            Customer = 0;
         }
 
         public int ID { get; set; }
         public decimal IdleProbability { get; set; }
-        public decimal AverageServiceTime { get; set; } 
+        public decimal AverageServiceTime { get; set; }
         public decimal Utilization { get; set; }
 
         public List<TimeDistribution> TimeDistribution;

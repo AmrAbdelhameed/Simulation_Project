@@ -23,7 +23,6 @@ namespace MultiQueueModels
         public List<TimeDistribution> InterarrivalDistribution { get; set; }
         public Enums.StoppingCriteria StoppingCriteria { get; set; }
         public Enums.SelectionMethod SelectionMethod { get; set; }
-        public int ServerPeriorty { get; set; }
         public int ToatalRun { get; set; }
         ///////////// OUTPUTS /////////////
         public List<SimulationCase> SimulationTable { get; set; }
