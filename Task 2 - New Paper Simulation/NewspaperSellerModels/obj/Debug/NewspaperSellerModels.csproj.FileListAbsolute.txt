@@ -46,3 +46,8 @@ C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper S
 C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.csprojResolveAssemblyReference.cache
 C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.dll
 C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\bin\Debug\NewspaperSellerModels.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\bin\Debug\NewspaperSellerModels.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.csprojResolveAssemblyReference.cache
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.pdb

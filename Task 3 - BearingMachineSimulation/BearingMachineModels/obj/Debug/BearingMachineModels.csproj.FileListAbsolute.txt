@@ -52,3 +52,8 @@ D:\FCIS\FCIS-2018-2\Simulation\SimulationTask3\BearingMachineModels\bin\Debug\Be
 D:\FCIS\FCIS-2018-2\Simulation\SimulationTask3\BearingMachineModels\obj\Debug\BearingMachineModels.csprojResolveAssemblyReference.cache
 D:\FCIS\FCIS-2018-2\Simulation\SimulationTask3\BearingMachineModels\obj\Debug\BearingMachineModels.dll
 D:\FCIS\FCIS-2018-2\Simulation\SimulationTask3\BearingMachineModels\obj\Debug\BearingMachineModels.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineModels\bin\Debug\BearingMachineModels.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineModels\bin\Debug\BearingMachineModels.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineModels\obj\Debug\BearingMachineModels.csprojResolveAssemblyReference.cache
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineModels\obj\Debug\BearingMachineModels.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineModels\obj\Debug\BearingMachineModels.pdb

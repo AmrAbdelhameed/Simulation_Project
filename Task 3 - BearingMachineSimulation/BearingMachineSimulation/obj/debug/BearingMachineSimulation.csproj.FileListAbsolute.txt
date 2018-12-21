@@ -134,3 +134,19 @@ D:\FCIS\FCIS-2018-2\Simulation\SimulationTask3\BearingMachineSimulation\obj\Debu
 C:\Users\Moataz\Desktop\Simulation Tasks\SimulationTask3\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.exe.config
 C:\Users\Moataz\Desktop\Simulation Tasks\SimulationTask3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.exe
 C:\Users\Moataz\Desktop\Simulation Tasks\SimulationTask3\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\bin\Debug\TestCases\TestCase3.txt
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\bin\Debug\TestCases\TestCase2.txt
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\bin\Debug\TestCases\TestCase1.txt
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.exe.config
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.exe
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\bin\Debug\BearingMachineSimulation.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\bin\Debug\BearingMachineModels.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\bin\Debug\BearingMachineModels.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\bin\Debug\BearingMachineTesting.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csprojResolveAssemblyReference.cache
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.MainForm.resources
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.Properties.Resources.resources
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.ResultsForm.resources
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.csproj.GenerateResource.Cache
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.exe
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 3 - BearingMachineSimulation\BearingMachineSimulation\obj\Debug\BearingMachineSimulation.pdb

@@ -58,3 +58,10 @@ C:\Users\user\Desktop\Simulation_Project\MultiQueueSimulation\MultiQueueModels\b
 C:\Users\user\Desktop\Simulation_Project\MultiQueueSimulation\MultiQueueModels\obj\Debug\MultiQueueModels.csprojResolveAssemblyReference.cache
 C:\Users\user\Desktop\Simulation_Project\MultiQueueSimulation\MultiQueueModels\obj\Debug\MultiQueueModels.dll
 C:\Users\user\Desktop\Simulation_Project\MultiQueueSimulation\MultiQueueModels\obj\Debug\MultiQueueModels.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 1 - MultiQueueSimulation\MultiQueueSimulation\MultiQueueModels\bin\Debug\MultiQueueModels.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 1 - MultiQueueSimulation\MultiQueueSimulation\MultiQueueModels\bin\Debug\MultiQueueModels.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 1 - MultiQueueSimulation\MultiQueueSimulation\MultiQueueModels\bin\Debug\MultiQueueTesting.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 1 - MultiQueueSimulation\MultiQueueSimulation\MultiQueueModels\bin\Debug\Oracle.DataAccess.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 1 - MultiQueueSimulation\MultiQueueSimulation\MultiQueueModels\obj\Debug\MultiQueueModels.csprojResolveAssemblyReference.cache
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 1 - MultiQueueSimulation\MultiQueueSimulation\MultiQueueModels\obj\Debug\MultiQueueModels.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 1 - MultiQueueSimulation\MultiQueueSimulation\MultiQueueModels\obj\Debug\MultiQueueModels.pdb

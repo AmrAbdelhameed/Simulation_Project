@@ -79,7 +79,7 @@ namespace MultiQueueSimulation
                 simulationSystem.Servers[i].Utilization = (decimal)simulationSystem.Servers[i].TotalWorkingTime / simulationSystem.ToatalRun;
 
             }
-            string testingResult = TestingManager.Test(simulationSystem, Constants.FileNames.TestCase3);
+            string testingResult = TestingManager.Test(simulationSystem, Constants.FileNames.TestCase1);
             MessageBox.Show(testingResult);
             Form2 f = new Form2();
             f.simulationSystem = simulationSystem;
@@ -90,7 +90,7 @@ namespace MultiQueueSimulation
         {
             simulationSystem = new SimulationSystem();
             fileLines = new List<string>();
-            StreamReader sr = new StreamReader(@"C:\Users\user\Desktop\Simulation_Project\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase3.txt");
+            StreamReader sr = new StreamReader(@"D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 1 - MultiQueueSimulation\MultiQueueSimulation\MultiQueueSimulation\TestCases\TestCase1.txt");
             while (!sr.EndOfStream)
             {
                 fileLines.Add(sr.ReadLine());

@@ -169,3 +169,16 @@ C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper S
 C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.Properties.Resources.resources
 C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.SimulationTable.resources
 C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csproj.GenerateResource.Cache
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerSimulation.exe.config
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.exe
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerSimulation.exe
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerSimulation.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerModels.dll
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerModels.pdb
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csprojResolveAssemblyReference.cache
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.Home.resources
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.PeroformancePreview.resources
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.Properties.Resources.resources
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.SimulationTable.resources
+D:\_FCIS\Sna 4\Semester 1\Modeling _ simulation\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csproj.GenerateResource.Cache
