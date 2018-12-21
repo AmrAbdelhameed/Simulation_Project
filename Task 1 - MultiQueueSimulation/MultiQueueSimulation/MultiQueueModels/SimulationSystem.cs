@@ -23,7 +23,7 @@ namespace MultiQueueModels
         public List<TimeDistribution> InterarrivalDistribution { get; set; }
         public Enums.StoppingCriteria StoppingCriteria { get; set; }
         public Enums.SelectionMethod SelectionMethod { get; set; }
-
+        public int ToatalRun { get; set; }
         ///////////// OUTPUTS /////////////
         public List<SimulationCase> SimulationTable { get; set; }
         public PerformanceMeasures PerformanceMeasures { get; set; }
@@ -41,7 +41,7 @@ namespace MultiQueueModels
 
                 InterarrivalDistribution[i].MinRange = maxRange + 1;
 
-                maxRange = (int) (InterarrivalDistribution[i].CummProbability * 100);
+                maxRange = (int)(InterarrivalDistribution[i].CummProbability * 100);
                 InterarrivalDistribution[i].MaxRange = maxRange;
             }
         }
@@ -55,7 +55,7 @@ namespace MultiQueueModels
         public int getInterArrivalTimeByRandomRange(int randomNumber)
         {
             int arrivalTime = 0;
-            
+
             for (int i = 0; i < InterarrivalDistribution.Count(); ++i)
             {
                 int minRange = InterarrivalDistribution[i].MinRange, maxRange = InterarrivalDistribution[i].MaxRange;

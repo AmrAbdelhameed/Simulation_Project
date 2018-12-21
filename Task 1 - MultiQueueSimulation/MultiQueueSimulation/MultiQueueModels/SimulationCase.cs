@@ -18,9 +18,9 @@ namespace MultiQueueModels
         public int InterArrival { get; set; }
         public int ArrivalTime { get; set; }
         public int RandomService { get; set; }
-        public int ServiceTime { get; set; }
         public Server AssignedServer { get; set; }
         public int StartTime { get; set; }
+        public int ServiceTime { get; set; }
         public int EndTime { get; set; }
         public int TimeInQueue { get; set; }
     }
