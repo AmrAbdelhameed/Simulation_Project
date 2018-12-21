@@ -156,3 +156,16 @@ C:\Users\Moataz\ATLAS Root Directory\Live Folders\College Work\Active Directory\
 C:\Users\Moataz\ATLAS Root Directory\Live Folders\College Work\Active Directory\Semester 1\Modeling & simulation\Tasks\Task2\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.Properties.Resources.resources
 C:\Users\Moataz\ATLAS Root Directory\Live Folders\College Work\Active Directory\Semester 1\Modeling & simulation\Tasks\Task2\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.SimulationTable.resources
 C:\Users\Moataz\ATLAS Root Directory\Live Folders\College Work\Active Directory\Semester 1\Modeling & simulation\Tasks\Task2\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csproj.GenerateResource.Cache
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerSimulation.exe.config
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.exe
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.pdb
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerSimulation.exe
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerSimulation.pdb
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerModels.dll
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\bin\Debug\NewspaperSellerModels.pdb
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csprojResolveAssemblyReference.cache
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.Home.resources
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.PeroformancePreview.resources
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.Properties.Resources.resources
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.SimulationTable.resources
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerSimulation\obj\Debug\NewspaperSellerSimulation.csproj.GenerateResource.Cache

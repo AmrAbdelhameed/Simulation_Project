@@ -41,3 +41,8 @@ C:\Users\Moataz\ATLAS Root Directory\Live Folders\College Work\Active Directory\
 C:\Users\Moataz\ATLAS Root Directory\Live Folders\College Work\Active Directory\Semester 1\Modeling & simulation\Active Code\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.csprojResolveAssemblyReference.cache
 C:\Users\Moataz\ATLAS Root Directory\Live Folders\College Work\Active Directory\Semester 1\Modeling & simulation\Active Code\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.dll
 C:\Users\Moataz\ATLAS Root Directory\Live Folders\College Work\Active Directory\Semester 1\Modeling & simulation\Active Code\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.pdb
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\bin\Debug\NewspaperSellerModels.dll
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\bin\Debug\NewspaperSellerModels.pdb
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.csprojResolveAssemblyReference.cache
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.dll
+C:\Users\Moataz\Desktop\Simulation Tasks\Simulation_Project\Task 2 - New Paper Simulation\NewspaperSellerModels\obj\Debug\NewspaperSellerModels.pdb
